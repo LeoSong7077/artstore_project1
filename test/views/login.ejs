@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascripts/signup.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            div#loginContent {
+                padding:10px;
+                border:1px solid black;
+                margin: 0 auto;
+                width:300px;
+            }
+
+            .title {
+                display:flex;
+                justify-content: center;
+            }
+
+            .btnBox {
+                display:flex;
+                justify-content: center;
+            }
+
+            .result {
+                margin: 20px;
+            }
+
+            #userid {
+                margin-left:16px;
+                background-color: antiquewhite;
+                padding:5px;
+            }
+
+        </style>
+	</head>
+	<body>
+        <div id="loginContent">
+            
+            <form id="logout" action="/logout" method="get">
+                <div class="title">
+                    <span style="text-align:center;"><%=username%></span><span>님,</span>
+                </div>
+                <div class="result">
+                    <span>아이디: </span><span id="userid"><%=userid%></span>
+                </div>
+                
+                <div class="btnBox">
+                    <button type="submit" class="btn btn-primary">로그아웃</button>
+                </div>
+            </form>
+
+        </div>
+        
+	</body>
+</html>

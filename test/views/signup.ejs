@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascripts/signup.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            div#wrap {
+                padding:10px;
+                border:1px solid black;
+                margin: 0 auto;
+                width:300px;
+            }
+
+            .btnBox {
+                display:flex;
+                justify-content: center;
+            }
+        </style>
+	</head>
+	<body>
+
+        <div id="wrap">
+            <p class="title" style="text-align: center;">회원가입</p>
+            <div class="user">
+                <form name="form" action="/signup" method="POST" class="signupform" onsubmit="return checkAll()">
+                    <div>
+                        <label for="userid">아이디: </label>
+                        <input name="userid" type="text" required style="margin-left:16px;" />
+                    </div>
+                    <div>
+                        <label for="username">이름: </label>
+                        <input name="username" type="text" required style="margin-left:32px;" />
+                    </div>
+                    <div>
+                        <label for="password">비밀번호: </label>
+                        <input name="password" type="password" required />
+                    </div>
+                    <div class="btnBox">
+                        <button type="submit" class="btn btn-primary">회원가입</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+	</body>
+</html>
