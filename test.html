@@ -5,6 +5,7 @@
         <title>artstore web</title>
         <script></script>
         <link rel="stylesheet" type="text/css" href="test.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head> 
     <body>
         <div id="page-wrapper">
@@ -12,7 +13,7 @@
             <header id="main-header">
                 <hgroup>
                     <h1 class="master-title">Artstore</h1>
-                    <h2 class="master-description">Bulletin Board</h2>
+                    <h3 class="master-description">Bulletin Board</h3>
                 </hgroup>
             </header>
 
@@ -23,7 +24,7 @@
             <div id="content">
                 <section id="main-section">
                     <div class="section-header">
-                        <h3 class="section-title">자유게시판</h1>
+                        <h3 class="section-title">자유게시판</h3>
                     </div>
                     <div class="section-body">
                         <div>post1</div>
@@ -41,8 +42,8 @@
                     </article> -->
                 </section>
                 <aside id="main-aside">
-                    <div class="aside-box login">
-                        <h3>login</h3>
+                    <div class="aside-box aside-box-login">
+                        <!-- <h5>login</h5> -->
                         <form id="login" action="/login" method="post">
                             <p style="text-align:center;">Login</p>
                             <div class="inputBox">
@@ -58,7 +59,7 @@
                         </form>
                     </div>
                     <div class="aside-box todaypost">
-                        <h3>최신 글</h3>
+                        <h5>최신 글</h5>
                         <ul>
                             <li><a href="#">today post1</a></li>
                             <li><a href="#">today post2</a></li>
@@ -69,8 +70,8 @@
             </div>
 
             <footer id="main-footer">
-                <h2>Corp. Artstore</h2>
-                <h3>Created by Daegyeom</h2>
+                <h4 style="text-align:end;">Corp. Artstore</h4>
+                <h6 style="text-align:end;">Created by Daegyeom</h6>
             </footer>
 
         </div>

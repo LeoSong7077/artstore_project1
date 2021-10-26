@@ -2,6 +2,19 @@ body, div, header, section, nav, footer, h1,h2,h3,h4 {
     margin:0;
 }
 
+html {
+    height:100%;
+}
+
+body {
+    background-color: navy;
+}
+
+#page-wrapper {
+    min-height: 100%; 
+    position: relative;
+}
+
 #main-header {
     background-color: cornflowerblue;
     padding:30px;
@@ -14,27 +27,42 @@ body, div, header, section, nav, footer, h1,h2,h3,h4 {
 
 #content {
     display:flex;
-    padding:20px;
+    padding-bottom:130px;
 }
 
 #main-section {
     flex:4;
     background-color: lightgoldenrodyellow;
-    padding:40px;
+    margin:20px;
+    padding:20px;
 }
 
 #main-aside {
     flex:1;
     background-color: lightgreen;
-    margin-left: 20px;
-    padding:20px;
+    margin: 20px;
 }
 
 #main-footer {
     background-color: mediumpurple;
+    padding:20px;
+    position:absolute;
+    height:100px;
+    width:100%;
+    left:0;
+    bottom:0;
+    
 }
 
+.aside-box {
+    padding:20px;
+    border:1px solid black;
+}
 
+.aside-box-login {
+    margin-bottom: 20px;
+    
+}
 
 .inputBox {
     display:flex;
