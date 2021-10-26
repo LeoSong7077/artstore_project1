@@ -1,0 +1,52 @@
+body, div, header, section, nav, footer, h1,h2,h3,h4 {
+    margin:0;
+}
+
+#main-header {
+    background-color: cornflowerblue;
+    padding:30px;
+}
+
+#main-navigation {
+    background-color: darkolivegreen;
+    padding:10px;
+}
+
+#content {
+    display:flex;
+    padding:20px;
+}
+
+#main-section {
+    flex:4;
+    background-color: lightgoldenrodyellow;
+    padding:40px;
+}
+
+#main-aside {
+    flex:1;
+    background-color: lightgreen;
+    margin-left: 20px;
+    padding:20px;
+}
+
+#main-footer {
+    background-color: mediumpurple;
+}
+
+
+
+.inputBox {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-self: center; */
+}
+.inputBox input {
+    margin-bottom: 10px;
+}
+
+.btnBox {
+    display:flex;
+    justify-content: center;
+}

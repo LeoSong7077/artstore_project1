@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>artstore web</title>
+        <script></script>
+        <link rel="stylesheet" type="text/css" href="test.css">
+    </head> 
+    <body>
+        <div id="page-wrapper">
+
+            <header id="main-header">
+                <hgroup>
+                    <h1 class="master-title">Artstore</h1>
+                    <h2 class="master-description">Bulletin Board</h2>
+                </hgroup>
+            </header>
+
+            <nav id="main-navigation">
+                navigation
+            </nav>
+
+            <div id="content">
+                <section id="main-section">
+                    <div class="section-header">
+                        <h3 class="section-title">자유게시판</h1>
+                    </div>
+                    <div class="section-body">
+                        <div>post1</div>
+                        <div>post2</div>
+                        <div>post3</div>
+                    </div>
+
+                    <!-- <article>
+                        <div class="article-header">
+                            <h1 class="article-title">자유게시판</h1>
+                        </div>
+                        <div>게시물1</div>
+                        <div>게시물2</div>
+                        <div>게시물3</div>
+                    </article> -->
+                </section>
+                <aside id="main-aside">
+                    <div class="aside-box login">
+                        <h3>login</h3>
+                        <form id="login" action="/login" method="post">
+                            <p style="text-align:center;">Login</p>
+                            <div class="inputBox">
+                                <input name="userid" type="text" placeholder="ID" required autofocus />
+                                <input name="password" type="password" placeholder="Password" required />
+                            </div>
+                            
+                            <div class="btnBox">
+                                <button type="submit" class="btn btn-primary">로그인</button>
+                                <span style="font-size: 20px;">&nbsp/&nbsp</span>
+                                <button type="button" class="btn btn-secondary" onclick="location.href='/signup'">회원가입</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="aside-box todaypost">
+                        <h3>최신 글</h3>
+                        <ul>
+                            <li><a href="#">today post1</a></li>
+                            <li><a href="#">today post2</a></li>
+                            <li><a href="#">today post3</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <footer id="main-footer">
+                <h2>Corp. Artstore</h2>
+                <h3>Created by Daegyeom</h2>
+            </footer>
+
+        </div>
+    </body>
+
+
+</html>
