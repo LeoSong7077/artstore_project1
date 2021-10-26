@@ -5,49 +5,108 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript" src="javascripts/signup.js"></script>
+        <script type="text/javascript" src="javascripts/login.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
         <style>
-            div#loginContent {
-                padding:10px;
-                border:1px solid black;
-                margin: 0 auto;
-                width:300px;
+            #login {
+                display:block;
+            }
+            #logout {
+                display:none;
             }
 
-            .inputBox {
-                display:flex;
-                flex-direction: column;
-                align-items: center;
-                /* justify-self: center; */
-            }
-            .inputBox input {
-                margin-bottom: 10px;
-            }
-
-            .btnBox {
-                display:flex;
-                justify-content: center;
-            }
         </style>
 	</head>
 	<body>
-        <div id="loginContent">
+        <div id="page-wrapper">
 
-            <form id="login" action="/login" method="post">
-                <p style="text-align:center;">Login</p>
-                <div class="inputBox">
-                    <input name="userid" type="text" placeholder="ID" required autofocus />
-                    <input name="password" type="password" placeholder="Password" required />
-                </div>
-                
-                <div class="btnBox">
-                    <button type="submit" class="btn btn-primary">로그인</button>
-                    <span style="font-size: 20px;">&nbsp/&nbsp</span>
-                    <button type="button" class="btn btn-secondary" onclick="location.href='/signup'">회원가입</button>
-                </div>
-            </form>
+            <header id="main-header">
+                <hgroup>
+                    <h1 class="master-title">Artstore</h1>
+                    <h3 class="master-description">Bulletin Board</h3>
+                </hgroup>
+            </header>
+
+            <nav id="main-navigation">
+                navigation
+            </nav>
+
+            <div id="content">
+                <section id="main-section">
+                    <div class="section-header">
+                        <h3 class="section-title">자유게시판</h3>
+                    </div>
+                    <div class="section-body">
+                        <div>post1</div>
+                        <div>post2</div>
+                        <div>post3</div>
+                    </div>
+
+                    <!-- <article>
+                        <div class="article-header">
+                            <h1 class="article-title">자유게시판</h1>
+                        </div>
+                        <div>게시물1</div>
+                        <div>게시물2</div>
+                        <div>게시물3</div>
+                    </article> -->
+                </section>
+                <script>
+                    var username = "<%= username %>";
+                    console.log(username)
+                    if(username!=''){
+                        '<div class="loginmember">로그인 되었습니다.</div>'
+                    }
+                </script>
+                <aside id="main-aside">
+                    <div class="aside-box aside-box-login">
+                        <!-- <h5>login</h5> -->
+                        <form id="login" action="/login" method="post" style="">
+                            <p style="text-align:center;">Login</p>
+                            <div class="inputBox">
+                                <input name="userid" type="text" placeholder="ID" required autofocus />
+                                <input name="password" type="password" placeholder="Password" required />
+                            </div>
+                            <div class="btnBox">
+                                <button type="submit" class="btn btn-primary" onclick="loginlogout_toggle()">로그인</button>
+                                <span style="font-size: 20px;">&nbsp/&nbsp</span>
+                                <button type="button" class="btn btn-secondary" onclick="location.href='/signup'">회원가입</button>
+                            </div>
+                            
+                        </form>
+
+                        <form id="logout" action="/logout" method="get">
+                            <div class="title">
+                                <span style="text-align:center;"></span><span><%= username %>님,</span>
+                    
+                            </div>
+                            <div class="result">
+                                <span>아이디: </span><span id="userid"><%= userid %></span>
+                            
+                            </div>
+                            
+                            <div class="btnBox">
+                                <button type="submit" class="btn btn-primary" onclick="loginlogout_toggle()">로그아웃</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="aside-box todaypost">
+                        <h5>최신 글</h5>
+                        <ul>
+                            <li><a href="#">today post1</a></li>
+                            <li><a href="#">today post2</a></li>
+                            <li><a href="#">today post3</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <footer id="main-footer">
+                <h4 style="text-align:end;">Corp. Artstore</h4>
+                <h6 style="text-align:end;">Created by Daegyeom</h6>
+            </footer>
 
         </div>
-        
-	</body>
+    </body>
 </html>

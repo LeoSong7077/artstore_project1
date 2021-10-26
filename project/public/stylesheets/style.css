@@ -1,8 +1,90 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* padding: 50px; */
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+  /* background-color: navy; */
 }
 
 a {
   color: #00B7FF;
+}
+
+body, div, header, section, nav, footer, h1,h2,h3,h4 {
+  /* margin:0; */
+}
+
+html {
+  height:100%;
+}
+
+#page-wrapper {
+  min-height: 100%; 
+  /* position: relative; */
+  /* background-color: navy; */
+}
+
+#main-header {
+  background-color: cornflowerblue;
+  padding:30px;
+}
+
+#main-navigation {
+  /* background-color: darkolivegreen; */
+  border: 1px solid gray;
+  padding:10px;
+}
+
+#content {
+  display:flex;
+  padding-bottom:120px; 
+  /* footer height(100px) + margin/padding(20px) */
+}
+
+#main-section {
+  flex:4;
+  /* background-color: lightgoldenrodyellow; */
+  border:1px solid grey;
+  margin:20px;
+  padding:20px;
+}
+
+#main-aside {
+  flex:1;
+  /* background-color: lightgreen; */
+  margin: 20px;
+}
+
+#main-footer {
+  background-color: mediumpurple;
+  padding:20px;
+  position:absolute;
+  height:100px;
+  width:100%;
+  left:0;
+  bottom:0;
+  
+}
+
+.aside-box {
+  padding:20px;
+  border:1px solid gray;
+}
+
+.aside-box-login {
+  margin-bottom: 20px;
+  
+}
+
+.inputBox {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-self: center; */
+}
+.inputBox input {
+  margin-bottom: 10px;
+}
+
+.btnBox {
+  display:flex;
+  justify-content: center;
 }

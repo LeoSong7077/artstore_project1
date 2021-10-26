@@ -6,7 +6,7 @@ var router = express.Router();
 //   res.render('index', { title: 'Express' });
 // });
 
-router.get('/', (req, res) => res.render('index'));
+router.get('/', (req, res) => res.render('index', {'userid' : '-', 'username' : '-'}));
 router.get("/login", (req, res) => res.render("login", {page: "login"}));
 router.get("/signup", (req, res) => res.render("signup", {page: "signup"}));
 

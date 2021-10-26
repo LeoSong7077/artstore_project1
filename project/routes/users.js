@@ -57,8 +57,8 @@ router.post("/login", (req, res) => {
               .then((user) => {
                 res
                   .cookie("x_auth", user.token)
-                  .status(200).render("login", {'userid' : user.userid, 'username' : user.username, })
-                  //.json({ loginSuccess: true, userId: user._id });
+                  .status(200).render("index", {'userid' : user.userid, 'username' : user.username, 'status':'login' })
+                  // .status(200).redirect('./')
               })
               .catch((err) => {
                 res.status(400).send(err);
